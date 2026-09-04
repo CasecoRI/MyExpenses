@@ -1033,4 +1033,5 @@
     <string name="warning_unlink_transfer">所选转账将被解除关联：它将被两个账户中的普通交易替代。</string>
     <string name="webui_download_no_data">在应用中打印、导出或创建备份后，文件将可从此处下载。</string>
     <string name="widget_title_budget">我的预算</string>
+    <string name="important_upgrade_information_heading">重要资讯</string>
 </resources>
