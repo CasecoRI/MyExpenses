@@ -702,7 +702,7 @@
     <string name="dialog_multi_tag">Всички избрани транзакции ще бъдат маркирани с %s.</string>
     <string name="dialog_multi_tag_clear">Всички маркери ще бъдат премахнати от избраните транзакции.</string>
     <plurals name="warning_delete_tag">
-        <item quantity="one">Маркер %1$s е картографиран в една транзакция. Трябва ли да бъде изтрит?</item>
+        <item quantity="one">Маркер %1$s е картографиран в %2$d транзакция. Трябва ли да бъде изтрит?</item>
         <item quantity="other">Маркерът %1$s е свързан с %2$d транзакции . Трябва ли да бъде изтрит?</item>
     </plurals>
     <string name="dialog_multi_tag_append">Добавяне на нови към съществуващите маркери</string>
@@ -1070,4 +1070,5 @@
     <string name="asset_type_commodity_plural">Стоки</string>
     <string name="trade_transfer">Прeвод</string>
     <string name="important_upgrade_information_heading">Важна информация</string>
+    <string name="help_floating_action_button">Плаващ бутон</string>
 </resources>

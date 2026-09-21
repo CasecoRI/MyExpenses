@@ -133,8 +133,9 @@ android {
 
     bundle {
         language {
-            //TODO find out how we can set enableSplit to false only when running tests
-            //enableSplit = false
+            enableSplit = !project.gradle.startParameter.taskNames.any {
+                it.contains("Test") || it.contains("Debug") || it.contains("Connected")
+            }
         }
     }
 
@@ -145,9 +146,9 @@ kotlin.sourceSets.configureEach {
     languageSettings.optIn("kotlin.RequiresOptIn")
 }
 
-//uncomment if you want to have Android log in stdout
 tasks.withType(Test).configureEach {
     systemProperty "robolectric.logging", "stdout"
+    jvmArgs("--add-opens=java.base/jdk.internal.access=ALL-UNNAMED")
 }
 
 dependencies {

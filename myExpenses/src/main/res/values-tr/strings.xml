@@ -702,7 +702,7 @@
     <string name="dialog_multi_tag">Tüm seçili muameleler %s ile etiketlenecektir.</string>
     <string name="dialog_multi_tag_clear">Seçili muamelelerden tüm etiketler kaldırılacaktır.</string>
     <plurals name="warning_delete_tag">
-        <item quantity="one">%1$s etiketi bir muameleyle eşleştirilmiştir. Silinmeli mi?</item>
+        <item quantity="one">%1$s etiketi %2$d muameleyle eşleştirilmiştir. Silinmeli mi?</item>
         <item quantity="other">%1$s etiketi %2$d muameleleriyle eşleştirilmiştir. Silinmeli mi? </item>
     </plurals>
     <string name="dialog_multi_tag_append">Mevcut etiketlere yeni etiket ekle</string>
@@ -1070,4 +1070,5 @@
     <string name="asset_type_commodity">Emtia</string>
     <string name="asset_type_commodity_plural">Emtialar</string>
     <string name="important_upgrade_information_heading">Önemli bilgi</string>
+    <string name="help_floating_action_button">Yüzen eylem düğmesi</string>
 </resources>

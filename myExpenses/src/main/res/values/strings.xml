@@ -474,6 +474,7 @@
     <string name="paypal_callback_info">Your transaction has been completed, and a receipt for your purchase has been emailed to you. You may log into your account at www.paypal.com to view details of this transaction.</string>
     <string name="search_transfer">Search for transfer</string>
     <string name="search_account">Search for account</string>
+    <string name="search_asset">Search for asset</string>
     <!-- Sort plans (recurring transactions) by the next instance  -->
     <string name="pref_sort_order_next_instance">Next instance</string>
     <string name="crash_dialog_title">{app_name} has crashed</string>
@@ -729,7 +730,7 @@
     <string name="dialog_multi_tag">All selected transactions will be tagged with %s.</string>
     <string name="dialog_multi_tag_clear">All tags will be removed from the selected transactions.</string>
     <plurals name="warning_delete_tag">
-        <item quantity="one">Tag %1$s is mapped to one transaction. Should it be deleted?</item>
+        <item quantity="one">Tag %1$s is mapped to %2$d transaction. Should it be deleted?</item>
         <item quantity="other">Tag %1$s is mapped to %2$d transactions. Should it be deleted?</item>
     </plurals>
     <string name="dialog_multi_tag_append">Add new tags to existing tags</string>
