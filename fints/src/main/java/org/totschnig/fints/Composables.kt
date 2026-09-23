@@ -30,6 +30,7 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.ExposedDropdownMenuBox
+import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -79,7 +80,7 @@ import org.totschnig.myexpenses.R as RB
 @Composable
 fun ColumnScope.BankingCredentials(
     bankingCredentials: MutableState<BankingCredentials>,
-    onDone: (BankingCredentials) -> Unit,
+    onDone: () -> Unit,
     searchBanks: (String) -> List<BankInfo> = { emptyList() },
 ) {
     val credentials = bankingCredentials.value
@@ -103,15 +104,25 @@ fun ColumnScope.BankingCredentials(
                 ),
                 value = credentials.bankLeitZahl,
                 onValueChange = {
-                    bankingCredentials.value = credentials.copy(bankLeitZahl = it.trim())
+                    bankingCredentials.value = credentials.copy(bankLeitZahl = it)
                     expanded = true
                 },
-                label = { Text(text = stringResource(id = R.string.bankleitzahl)) },
+                label = { Text(text = stringResource(R.string.bankleitzahl_or_name)) },
+                supportingText = {
+                    if (credentials.bankLeitZahl.isNotEmpty() && credentials.bankLeitZahl.length < 3) {
+                        Text(text = stringResource(R.string.bank_search_min_chars))
+                    } else {
+                        Text(text = stringResource(R.string.bank_search_hint))
+                    }
+                },
+                trailingIcon = {
+                    ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
+                },
                 singleLine = true
             )
             if (searchResults.isNotEmpty()) {
                 ExposedDropdownMenu(
-                    expanded = expanded && searchResults.isNotEmpty(),
+                    expanded = expanded,
                     onDismissRequest = { expanded = false }
                 ) {
                     searchResults.forEach { bankInfo ->
@@ -139,7 +150,8 @@ fun ColumnScope.BankingCredentials(
                                 }
                             },
                             onClick = {
-                                bankingCredentials.value = credentials.copy(bankLeitZahl = bankInfo.blz)
+                                bankingCredentials.value =
+                                    credentials.copy(bankLeitZahl = bankInfo.blz)
                                 expanded = false
                             }
                         )
@@ -149,7 +161,8 @@ fun ColumnScope.BankingCredentials(
         }
     }
     OutlinedTextField(
-        modifier = Modifier.align(Alignment.CenterHorizontally)
+        modifier = Modifier
+            .align(Alignment.CenterHorizontally)
             .semantics { this.contentType = ContentType.Username },
         enabled = credentials.isNew,
         keyboardOptions = KeyboardOptions(imeAction = ImeAction.Next),
@@ -179,11 +192,10 @@ fun ColumnScope.BankingCredentials(
             keyboardType = KeyboardType.Password,
             imeAction = ImeAction.Done
         ),
-        keyboardActions = if (credentials.isComplete) KeyboardActions(
-            onDone = {
-                onDone(credentials)
-            }
-        ) else KeyboardActions.Default,
+        keyboardActions = if (credentials.isComplete)
+            KeyboardActions(onDone = { onDone() })
+        else
+            KeyboardActions.Default,
         value = credentials.password ?: "",
         onValueChange = {
             bankingCredentials.value = credentials.copy(password = it.trim())
@@ -207,7 +219,8 @@ fun PasswordVisibilityToggleIcon(
     onTogglePasswordVisibility: () -> Unit,
 ) {
     val image = if (showPassword) Icons.Filled.Visibility else Icons.Filled.VisibilityOff
-    val contentDescription = stringResource(if (showPassword) RB.string.hide_password else RB.string.show_password)
+    val contentDescription =
+        stringResource(if (showPassword) RB.string.hide_password else RB.string.show_password)
 
     IconButton(onClick = onTogglePasswordVisibility) {
         Icon(imageVector = image, contentDescription = contentDescription)
