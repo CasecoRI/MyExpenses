@@ -66,9 +66,8 @@
     
     <string name="dialog_title_balance_account">结平%1$s</string>
     <string name="dialog_title_contrib_feature">高级功能</string>
-    <plurals name="dialog_title_warning_delete_account">
-        <item quantity="other">删除 %1$d 个账户？</item>
-    </plurals>
+    <string name="dialog_title_warning_delete_account">删除账户？</string>
+    <string name="dialog_title_warning_delete_closed_account">删除停用的账户？</string>
     <string name="dialog_title_warning_delete_category">要删除类别吗？</string>
     <string name="dialog_title_warning_delete_template">要删除模板吗？</string>
     <string name="dialog_title_warning_delete_transaction">要删除交易吗？</string>
@@ -662,6 +661,7 @@
     <string name="remapping_result">所选交易已被重新分配映射。</string>
     <string name="clone_and_remap_result">所选交易已被复制并重新分配映射。</string>
     <string name="remap_empty_list">找不到一个项目可以映射到所有选定的交易。</string>
+    <string name="remap_update_value_date">同时更新价值日期</string>
     
     <string name="button_label_clone_and_remap">复制并重新分配映射</string>
     
