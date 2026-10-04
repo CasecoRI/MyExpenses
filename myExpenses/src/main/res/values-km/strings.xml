@@ -354,4 +354,5 @@
     <string name="pref_tag_style_outline">ព្រំប្រទល់មានពណ៌</string>
     <string name="pref_tag_style_filled">មានពណ៌ពេញ</string>
     <string name="trade_additional_costs">ចំណាយបន្ថែម</string>
+    <string name="contrib_feature_portfolio_tracking">ការតាមដានផលប័ត្រ</string>
 </resources>

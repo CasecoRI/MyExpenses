@@ -907,4 +907,5 @@
     <string name="pref_tag_style_outline">Bordură colorată</string>
     <string name="pref_tag_style_filled">Complet colorat</string>
     <string name="trade_additional_costs">Costuri suplimentare</string>
+    <string name="contrib_feature_portfolio_tracking">Urmărirea portofoliului</string>
 </resources>

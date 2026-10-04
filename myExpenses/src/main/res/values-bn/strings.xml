@@ -1042,4 +1042,5 @@
     <string name="pref_tag_style_outline">রঙিন বর্ডার</string>
     <string name="pref_tag_style_filled">সম্পূর্ণ রঙিন</string>
     <string name="trade_additional_costs">অতিরিক্ত খরচ</string>
+    <string name="contrib_feature_portfolio_tracking">পোর্টফোলিও ট্র্যাকিং</string>
 </resources>
