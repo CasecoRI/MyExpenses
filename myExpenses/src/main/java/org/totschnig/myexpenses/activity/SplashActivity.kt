@@ -9,10 +9,6 @@ import org.totschnig.myexpenses.MyApplication
 import org.totschnig.myexpenses.preference.PrefKey
 import kotlin.system.exitProcess
 
-enum class Version {
-    V1, V2
-}
-
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +23,7 @@ class SplashActivity : Activity() {
                             -1
                         ) == -1
                     ) OnboardingActivity::class.java
-                    else prefHandler.mainScreenClass
+                    else MyExpensesV2::class.java
                 ).apply {
                     flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                 })

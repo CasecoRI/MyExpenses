@@ -37,7 +37,6 @@ import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.totschnig.myexpenses.R
-import org.totschnig.myexpenses.activity.MyExpenses.Companion.MANAGE_HIDDEN_FRAGMENT_TAG
 import org.totschnig.myexpenses.compose.conditional
 import org.totschnig.myexpenses.compose.filter.FilterCard
 import org.totschnig.myexpenses.compose.filter.FilterDialog
@@ -85,6 +84,7 @@ import org.totschnig.myexpenses.model.Money
 import org.totschnig.myexpenses.model.PreDefinedPaymentMethod.Companion.translateIfPredefined
 import org.totschnig.myexpenses.preference.ColorSource
 import org.totschnig.myexpenses.preference.PrefKey
+import org.totschnig.myexpenses.preference.TagStyle
 import org.totschnig.myexpenses.provider.DataBaseAccount
 import org.totschnig.myexpenses.provider.DataBaseAccount.Companion.isAggregate
 import org.totschnig.myexpenses.provider.KEY_ACCOUNTID
@@ -164,6 +164,7 @@ typealias RenderFactory = (
     withCategoryIcon: Boolean,
     colorSource: ColorSource,
     onToggleCrStatus: ((Long) -> Unit)?,
+    tagStyle: TagStyle,
 ) -> ItemRenderer
 
 abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
@@ -609,11 +610,6 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
 
             R.id.DELETE_ACCOUNT_COMMAND_DO -> {
                 val accountIds = tag as LongArray
-                val manageHiddenFragment =
-                    supportFragmentManager.findFragmentByTag(MANAGE_HIDDEN_FRAGMENT_TAG)
-                if (manageHiddenFragment != null) {
-                    supportFragmentManager.beginTransaction().remove(manageHiddenFragment).commit()
-                }
                 showSnackBarIndefinite(R.string.progress_dialog_deleting)
                 viewModel.deleteAccounts(accountIds).observe(this) { result ->
                     result.onSuccess {
@@ -1173,6 +1169,7 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
     fun BaseAccount?.isMenuItemVisible(itemId: Int): Boolean {
         return when (itemId) {
             R.id.SEARCH_COMMAND -> hasItems
+            R.id.DISTRIBUTION_COMMAND -> sumInfo.value.mappedCategories
             else -> if ((this as? FullAccount)?.isPortfolio == true) when (itemId) {
                 R.id.IMPORT_TRADES_COMMAND, R.id.TUNE_COMMAND -> true
                 else -> false
@@ -1342,7 +1339,7 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
     }
 
     val rendererFactory: RenderFactory =
-        { renderType, account, withCategoryIcon, colorSource, onToggleCrStatus ->
+        { renderType, account, withCategoryIcon, colorSource, onToggleCrStatus, tagStyle ->
             when (renderType) {
 
                 RenderType.New -> {
@@ -1351,7 +1348,8 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
                         withCategoryIcon = withCategoryIcon,
                         colorSource = colorSource,
                         onToggleCrStatus = onToggleCrStatus,
-                        withAccountLabel = account.isAggregate
+                        withAccountLabel = account.isAggregate,
+                        tagStyle = tagStyle,
                     )
                 }
 
@@ -1374,7 +1372,8 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
                         ),
                         colorSource = colorSource,
                         withAccountLabel = account.isAggregate,
-                        onToggleCrStatus = onToggleCrStatus
+                        onToggleCrStatus = onToggleCrStatus,
+                        tagStyle = tagStyle,
                     )
                 }
             }
@@ -1562,7 +1561,7 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
             }
         }
 
-        val headerData = remember(account.queryKey) { viewModel.headerData(account, v2) }
+        val headerData = remember(account.queryKey, account.openingBalance) { viewModel.headerData(account, v2) }
 
         val isProcessingFilter = remember { mutableStateOf(false) }
 
@@ -1650,6 +1649,7 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
                     val withCategoryIcon =
                         viewModel.withCategoryIcon.collectAsState(initial = true)
                     val renderType = viewModel.renderer.collectAsState(initial = RenderType.New)
+                    val tagStyle = viewModel.tagStyle.collectAsState(initial = TagStyle.OUTLINE)
                     val renderer = remember(account.grouping) {
                         derivedStateOf {
                             Timber.d("init renderer ${renderType.value}")
@@ -1658,7 +1658,8 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
                                 account,
                                 withCategoryIcon.value,
                                 colorSource.value,
-                                onToggleCrStatus.value
+                                onToggleCrStatus.value,
+                                tagStyle.value
                             )
                         }
                     }

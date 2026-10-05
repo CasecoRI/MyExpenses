@@ -369,14 +369,22 @@
     <string name="warning_change_fraction_digits_2_divided" tools:ignore="PluralsCandidate">Si no se actualizan los importes, se mostrarán como divididos por %d después del cambio.</string>
     <string name="warning_change_fraction_digits_3">Si se actualizan los importes, se perderá la información de la parte fraccionaria.</string>
     <string name="warning_change_fraction_digits_checkbox_label">Actualizar los importes en la base de datos</string>
-    <string name="import_categories_success">%1$d categorías han sido importadas con éxito.</string>
-    <string name="import_parties_success">%1$d grupos han sido importados con éxito.</string>
-    <string name="import_accounts_success">%1$d cuentas han sido importadas con éxito.</string>
-    <string name="import_transactions_success" tools:ignore="PluralsCandidate">%1$d transacciones importadas con éxito en la cuenta %2$s</string>
-    <string name="import_accounts_none">Ninguna cuenta importada</string>
-    <string name="import_categories_none">Ninguna categoría importada</string>
-    <string name="import_parties_none">Ningún grupo importado</string>
-    <string name="import_transactions_none">Ninguna transacción fue importada a la cuenta %1$s</string>
+    <plurals name="import_categories_result">
+        <item quantity="one">%1$d categorías han sido importadas con éxito.</item>
+        <item quantity="other">%1$d categorías han sido importadas con éxito.</item>
+    </plurals>
+    <plurals name="import_parties_result">
+        <item quantity="one">%1$d grupos han sido importados con éxito.</item>
+        <item quantity="other">%1$d grupos han sido importados con éxito.</item>
+    </plurals>
+    <plurals name="import_accounts_result">
+        <item quantity="one">%1$d cuentas han sido importadas con éxito.</item>
+        <item quantity="other">%1$d cuentas han sido importadas con éxito.</item>
+    </plurals>
+    <plurals name="import_transactions_result">
+        <item quantity="one">%1$d transacciones importadas con éxito en la cuenta %2$s</item>
+        <item quantity="other">%1$d transacciones importadas con éxito en la cuenta %2$s</item>
+    </plurals>
     <string name="import_source_select_error">Por favor, proporcione un archivo de tipo %1$s</string>
     <string name="menu_categories_setup_default">Instalar categorías por defecto</string>
     <string name="widget_title_accounts">Mis cuentas</string>
@@ -820,7 +828,7 @@
     </plurals>
     <string name="title_activity_debt_overview">Vista general de la deuda</string>
     <plurals name="import_categories_icons_updated">
-        <item quantity="one">Se ha actualizado una categoría con un icono.</item>
+        <item quantity="one">Se ha actualizado %1$d categoría con un icono.</item>
         <item quantity="many">%1$d categorías fueron actualizadas con iconos.</item>
         <item quantity="other">%1$d categorías fueron actualizadas con iconos.</item>
     </plurals>
@@ -963,7 +971,6 @@
     <string name="budget_import_none_found">No se han encontrado presupuestos.</string>
     <string name="quick_search">Búsqueda rápida</string>
     <string name="complex_search">Búsqueda compleja</string>
-    <string name="menu_show_equivalent_value">Valor equivalente</string>
     <string name="initial_value">Valor inicial</string>
     <string name="enable_automatic_daily_exchange_rate_download">Descarga automática del tipo de cambio diario</string>
     <string name="price_history">Historial de precios</string>
@@ -1063,7 +1070,7 @@
     <string name="trade_matching_transaction_found">Se encontró una operación coincidente en la cuenta de financiación. Seleccione para vincular:</string>
     <string name="asset_quantity_at_price">%1$s a %2$s</string>
     <string name="contrib_feature_portfolio_tracking">Seguimiento de cartera</string>
-    <string name="premium_nudge_portfolio_message">Puedes gestionar una cartera gratis. Actualiza para gestionar varias carteras y desbloquear funciones de seguimiento avanzadas.</string>
+    <string name="premium_nudge_portfolio_message">Puedes gestionar una cartera gratis. Actualiza para gestionar varias carteras y desbloquear funciones avanzadas (%1$s).</string>
     <string name="rounding">Redondeo</string>
     <string name="parse_error_at_line">Error en la línea %1$d: %2$s</string>
     <plurals name="import_trades_missing_assets_message">
@@ -1083,4 +1090,10 @@
     <string name="service_starting">Iniciando…</string>
     <string name="trade_transfer">Transferencia</string>
     <string name="important_upgrade_information_heading">Información importante</string>
+    <string name="single_pane_view">Panel único</string>
+    <string name="split_pane_view">Vista dividida</string>
+    <string name="pref_tag_style_title">Estilo de etiqueta</string>
+    <string name="pref_tag_style_outline">Borde coloreado</string>
+    <string name="pref_tag_style_filled">Totalmente coloreado</string>
+    <string name="trade_additional_costs">Costes adicionales</string>
 </resources>

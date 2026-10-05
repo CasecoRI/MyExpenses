@@ -363,14 +363,22 @@
     <string name="warning_change_fraction_digits_2_divided" tools:ignore="PluralsCandidate">தொகைகள் புதுப்பிக்கப்படவில்லை என்றால், மாற்றத்திற்குப் பின் அவை %d மூலம் வகுக்கப்பட்டது போல் காட்டப்படும்.</string>
     <string name="warning_change_fraction_digits_3">தொகைகள் புதுப்பிக்கப்பட்டால், நீங்கள் அவைகளின் பின்ன பகுதியை பற்றிய தகவலை இழப்பீர்கள்.</string>
     <string name="warning_change_fraction_digits_checkbox_label">தரவுத்தளத்தில் உள்ள தொகைகளை புதுப்பி</string>
-    <string name="import_categories_success">%1$d வகைகள் வெற்றிகரமாக இறக்குமதி செய்யப்பட்டன.</string>
-    <string name="import_parties_success">%1$d தரப்புகள் வெற்றிகரமாக இறக்குமதி செய்யப்பட்டன.</string>
-    <string name="import_accounts_success">%1$d கணக்குகள் வெற்றிகரமாக இறக்குமதி செய்யப்பட்டன.</string>
-    <string name="import_transactions_success" tools:ignore="PluralsCandidate">%1$d பரிவர்த்தனைகள் வெற்றிகரமாக %2$s கணக்கிற்கு இறக்குமதி செய்யப்பட்டன</string>
-    <string name="import_accounts_none">எந்த கணக்குகளும் இறக்குமதி செய்யப்படவில்லை</string>
-    <string name="import_categories_none">எந்த வகைகளும் இறக்குமதி செய்யப்படவில்லை</string>
-    <string name="import_parties_none">எந்த தரப்புகளும் இறக்குமதி செய்யப்படவில்லை</string>
-    <string name="import_transactions_none">எந்த பரிவர்த்தனைகளும் %1$s கணக்கிற்கு இறக்குமதி செய்யப்படவில்லை</string>
+    <plurals name="import_categories_result">
+        <item quantity="one">%1$d வகைகள் வெற்றிகரமாக இறக்குமதி செய்யப்பட்டன.</item>
+        <item quantity="other">%1$d வகைகள் வெற்றிகரமாக இறக்குமதி செய்யப்பட்டன.</item>
+    </plurals>
+    <plurals name="import_parties_result">
+        <item quantity="one">%1$d தரப்புகள் வெற்றிகரமாக இறக்குமதி செய்யப்பட்டன.</item>
+        <item quantity="other">%1$d தரப்புகள் வெற்றிகரமாக இறக்குமதி செய்யப்பட்டன.</item>
+    </plurals>
+    <plurals name="import_accounts_result">
+        <item quantity="one">%1$d கணக்குகள் வெற்றிகரமாக இறக்குமதி செய்யப்பட்டன.</item>
+        <item quantity="other">%1$d கணக்குகள் வெற்றிகரமாக இறக்குமதி செய்யப்பட்டன.</item>
+    </plurals>
+    <plurals name="import_transactions_result">
+        <item quantity="one">%1$d பரிவர்த்தனைகள் வெற்றிகரமாக %2$s கணக்கிற்கு இறக்குமதி செய்யப்பட்டன</item>
+        <item quantity="other">%1$d பரிவர்த்தனைகள் வெற்றிகரமாக %2$s கணக்கிற்கு இறக்குமதி செய்யப்பட்டன</item>
+    </plurals>
     <string name="import_source_select_error">தயவுசெய்து %1$s வகையில் ஒரு கோப்பை வழங்கவும்</string>
     <string name="menu_categories_setup_default">இயல்புநிலை வகைகளை அமைக்கவும்</string>
     <string name="widget_title_accounts">எனது கணக்குகள்</string>
@@ -959,7 +967,6 @@
     <string name="sort_direction">திசையை வரிசைப்படுத்துங்கள்</string>
     <string name="batch_download_result">%d விலைகள் பதிவிறக்கம் செய்யப்பட்டு தரவுத்தளத்தில் சேமிக்கப்பட்டன.</string>
     <string name="filter_dialog_empty">இதுவரை எந்த அளவுகோல்களும் சேர்க்கப்படவில்லை. உங்கள் வினவலை வரையறுக்கவும், உங்கள் முடிவுகளை செம்மைப்படுத்தவும் மேலே உள்ள பொத்தான்களைத் தட்டவும்.</string>
-    <string name="menu_show_equivalent_value">சமமான மதிப்பு</string>
     <string name="initial_value">தொடக்க மதிப்பு</string>
     <string name="current_value">தற்போதைய மதிப்பு</string>
     <string name="equivalent_amount_plural">சமமான அளவு</string>
@@ -1026,4 +1033,8 @@
     <string name="content_description_select_recent_file">அண்மைக் கால கோப்புகளிலிருந்து தேர்ந்தெடுக்கவும்</string>
     <string name="menu_templates">வார்ப்புருக்கள்</string>
     <string name="important_upgrade_information_heading">முக்கிய தகவல்கள்</string>
+    <string name="pref_tag_style_title">குறிச்சொல் பாணி</string>
+    <string name="pref_tag_style_outline">வண்ண எல்லை</string>
+    <string name="pref_tag_style_filled">முழு வண்ணமயமான</string>
+    <string name="trade_additional_costs">கூடுதல் செலவுகள்</string>
 </resources>

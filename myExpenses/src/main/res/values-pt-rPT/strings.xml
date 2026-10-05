@@ -350,14 +350,22 @@
     <string name="warning_change_fraction_digits_2_divided" tools:ignore="PluralsCandidate">Se as quantias não forem atualizadas, elas serão exibidos como multiplicadas por %d após o câmbio.</string>
     <string name="warning_change_fraction_digits_3">Se as quantias forem atualizadas, você perderá a informação acerca da sua parte fracionária.</string>
     <string name="warning_change_fraction_digits_checkbox_label">Atualizar quantias no banco de dados</string>
-    <string name="import_categories_success">%1$d categorias importadas com sucesso.</string>
-    <string name="import_parties_success">%1$d parceiros importados com sucesso.</string>
-    <string name="import_accounts_success">%1$d contas importadas com sucesso.</string>
-    <string name="import_transactions_success" tools:ignore="PluralsCandidate">%1$d transações importadas com sucesso na conta %2$s</string>
-    <string name="import_accounts_none">Não foi importada nenhuma conta</string>
-    <string name="import_categories_none">Não foi importada nenhuma categoria</string>
-    <string name="import_parties_none">Não foi importado nenhum parceiro</string>
-    <string name="import_transactions_none">Não foi importada nenhuma transação para a conta %1$s</string>
+    <plurals name="import_categories_result">
+        <item quantity="one">%1$d categorias importadas com sucesso.</item>
+        <item quantity="other">%1$d categorias importadas com sucesso.</item>
+    </plurals>
+    <plurals name="import_parties_result">
+        <item quantity="one">%1$d parceiros importados com sucesso.</item>
+        <item quantity="other">%1$d parceiros importados com sucesso.</item>
+    </plurals>
+    <plurals name="import_accounts_result">
+        <item quantity="one">%1$d contas importadas com sucesso.</item>
+        <item quantity="other">%1$d contas importadas com sucesso.</item>
+    </plurals>
+    <plurals name="import_transactions_result">
+        <item quantity="one">%1$d transações importadas com sucesso na conta %2$s</item>
+        <item quantity="other">%1$d transações importadas com sucesso na conta %2$s</item>
+    </plurals>
     <string name="import_source_select_error">Por favor, forneça um ficheiro do tipo %1$s</string>
     <string name="menu_categories_setup_default">Configurar categorias padrão</string>
     <string name="widget_title_accounts">Minhas contas</string>
@@ -758,7 +766,7 @@
     <string name="title_activity_debt_overview">Visão geral da dívida</string>
     <string name="pref_mlkit_script_title">Script para MlKit</string>
     <plurals name="import_categories_icons_updated">
-        <item quantity="one">Uma categoria foi atualizada com ícone.</item>
+        <item quantity="one">%1$d categoria foi atualizada com ícone.</item>
         <item quantity="other">%1$d categorias foram atualizadas com ícones.</item>
     </plurals>
     <string name="dialog_title_purge_backups">Expurgar backups antigos</string>
@@ -903,7 +911,6 @@
     <string name="budget_import_none_found">Nenhum orçamento encontrado.</string>
     <string name="webui_download_no_data">Depois de imprimir, exportar ou criar backups na app, os ficheiros estarão disponíveis aqui para descarga.</string>
     <string name="filter_dialog_empty">Nenhum critério adicionado ainda. Toque nos botões acima para definir a sua consulta e refinar os seus resultados.</string>
-    <string name="menu_show_equivalent_value">Valor equivalente</string>
     <string name="initial_value">Valor inicial</string>
     <string name="current_value">Valor atual</string>
     <string name="total_value">Valor total</string>
@@ -962,7 +969,11 @@
     <string name="trade_matching_transaction_found">Operação correspondente encontrada na conta de financiamento. Selecione para vincular:</string>
     <string name="asset_quantity_at_price">%1$s a %2$s</string>
     <string name="contrib_feature_portfolio_tracking">Acompanhamento de carteira</string>
-    <string name="premium_nudge_portfolio_message">Pode gerir uma carteira gratuitamente. Atualize para gerir várias carteiras e desbloquear funcionalidades de acompanhamento avançadas.</string>
+    <string name="premium_nudge_portfolio_message">Pode gerir uma carteira gratuitamente. Atualize para a versão Premium para gerir várias carteiras e desbloquear funcionalidades avançadas (%1$s).</string>
     <string name="rounding">Arredondamento</string>
     <string name="important_upgrade_information_heading">Informações importantes</string>
+    <string name="pref_tag_style_title">Estilo da etiqueta</string>
+    <string name="pref_tag_style_outline">Contorno colorido</string>
+    <string name="pref_tag_style_filled">Totalmente colorido</string>
+    <string name="trade_additional_costs">Custos adicionais</string>
 </resources>

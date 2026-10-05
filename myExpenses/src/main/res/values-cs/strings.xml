@@ -375,14 +375,30 @@
     <string name="warning_change_fraction_digits_2_divided" tools:ignore="PluralsCandidate">Pokud nedojde k aktualizaci částek, po změně se zobrazí jako rozdělené podle %d.</string>
     <string name="warning_change_fraction_digits_3">Pokud budou částky aktualizovány, přijdete o informace o jejich desetinné části.</string>
     <string name="warning_change_fraction_digits_checkbox_label">Aktualizovat částky v databázi</string>
-    <string name="import_categories_success">%1$d kategorie byly úspěšně naimportovány.</string>
-    <string name="import_parties_success">%1$d strany byly úspěšně naimportovány.</string>
-    <string name="import_accounts_success">Účty (celkem %1$d) byly úspěšně importovány.</string>
-    <string name="import_transactions_success" tools:ignore="PluralsCandidate">%1$d transakcí úspěšně importováno na účet %2$s</string>
-    <string name="import_accounts_none">Nebyly importovány žádné účty</string>
-    <string name="import_categories_none">Žádné importované kategorie</string>
-    <string name="import_parties_none">Nebyly importovány žádné strany</string>
-    <string name="import_transactions_none">Do účtu %1$s nebyly importovány žádné transakce</string>
+    <plurals name="import_categories_result">
+        <item quantity="one">%1$d kategorie byla úspěšně importována.</item>
+        <item quantity="few">%1$d kategorie byly úspěšně importovány.</item>
+        <item quantity="many">%1$d kategorií bylo úspěšně importováno.</item>
+        <item quantity="other">%1$d kategorií bylo úspěšně importováno.</item>
+    </plurals>
+    <plurals name="import_parties_result">
+        <item quantity="one">%1$d strana byla úspěšně importována.</item>
+        <item quantity="few">%1$d strany byly úspěšně importovány.</item>
+        <item quantity="many">%1$d stran bylo úspěšně importováno.</item>
+        <item quantity="other">%1$d stran bylo úspěšně importováno.</item>
+    </plurals>
+    <plurals name="import_accounts_result">
+        <item quantity="one">%1$d účet byl úspěšně importován.</item>
+        <item quantity="few">%1$d účty byly úspěšně importovány.</item>
+        <item quantity="many">%1$d účtů bylo úspěšně importováno.</item>
+        <item quantity="other">%1$d účtů bylo úspěšně importováno.</item>
+    </plurals>
+    <plurals name="import_transactions_result">
+        <item quantity="one">%1$d transakce byla úspěšně importována na účet %2$s</item>
+        <item quantity="few">%1$d transakce byly úspěšně importovány na účet %2$s</item>
+        <item quantity="many">%1$d transakcí bylo úspěšně importováno na účet %2$s</item>
+        <item quantity="other">%1$d transakcí bylo úspěšně importováno na účet %2$s</item>
+    </plurals>
     <string name="import_source_select_error">Poskytněte prosím soubor typu %1$s</string>
     <string name="menu_categories_setup_default">Nastavit výchozí kategorie</string>
     <string name="widget_title_accounts">Moje účty</string>
@@ -915,7 +931,7 @@
     <string name="auto_fill_focus">Nastavte zaměření na příjemce platby</string>
     <string name="debt">Dluh</string>
     <plurals name="import_categories_icons_updated">
-        <item quantity="one">Jedna kategorie byla aktualizována ikonou.</item>
+        <item quantity="one">%1$d kategorie byla aktualizována ikonou.</item>
         <item quantity="few">%1$d kategorie byly aktualizovány ikonami.</item>
         <item quantity="other">%1$d kategorie byly aktualizovány ikonami.</item>
     </plurals>
@@ -984,7 +1000,6 @@
     <string name="budget_import_none_found">Žádné rozpočty nenalezeny.</string>
     <string name="webui_download_no_data">Po vytištění, exportu nebo vytvoření záloh v aplikaci budou soubory dostupné ke stažení zde.</string>
     <string name="filter_dialog_empty">Žádná kritéria zatím nebyla přidána. Klepněte na tlačítka výše, abyste definovali svůj dotaz a upřesnili výsledky.</string>
-    <string name="menu_show_equivalent_value">Ekvivalentní hodnota</string>
     <string name="initial_value">Počáteční hodnota</string>
     <string name="current_value">Současná hodnota</string>
     <string name="total_value">Celková hodnota</string>
@@ -1090,6 +1105,10 @@
     <string name="trade_withdraw">Výběr</string>
     <string name="trade_matching_transaction_found">Shodná transakce nalezená na účtu financování. Vyberte pro propojení:</string>
     <string name="contrib_feature_portfolio_tracking">Sledování portfolia</string>
-    <string name="premium_nudge_portfolio_message">Jedno portfolio můžete spravovat zdarma. Upgradujte na správu více portfolií a odemkněte pokročilé funkce sledování.</string>
+    <string name="premium_nudge_portfolio_message">Jedno portfolio můžete spravovat zdarma. Upgradujte na správu více portfolií a odemkněte pokročilé funkce (včetně %1$s).</string>
     <string name="help_floating_action_button">Plovoucí akční tlačítko</string>
+    <string name="pref_tag_style_title">Styl štítku</string>
+    <string name="pref_tag_style_outline">Barevný okraj</string>
+    <string name="pref_tag_style_filled">Plně barevné</string>
+    <string name="trade_additional_costs">Dodatečné náklady</string>
 </resources>

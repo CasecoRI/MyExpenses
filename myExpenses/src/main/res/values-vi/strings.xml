@@ -78,7 +78,7 @@
     <!-- %1$s is replace with account label -->
     <string name="dialog_title_balance_account">Số dư %1$s</string>
     <string name="dialog_title_contrib_feature">Tính năng trả phí</string>
-    <string name="dialog_title_warning_delete_account">Xóa tài khoản %1$d?</string>
+    <string name="dialog_title_warning_delete_account">Xóa tài khoản?</string>
     <string name="dialog_title_warning_delete_template">Xoá bản mẫu?</string>
     <string name="dialog_title_warning_delete_transaction">Xoá giao dịch?</string>
     <string name="expense">Chi</string>
@@ -351,14 +351,18 @@
     <string name="warning_change_fraction_digits_2_divided" tools:ignore="PluralsCandidate">Nếu số tiền không được cập nhật, nó sẽ được hiển thị dưới dạng được chia đi %d lần sau khi thay đổi.</string>
     <string name="warning_change_fraction_digits_3">Nếu số tiền được cập nhật, bạn sẽ mất các thông tin về phần thập phân của số tiền các giao dịch đó.</string>
     <string name="warning_change_fraction_digits_checkbox_label">Cập nhật các số tiền</string>
-    <string name="import_categories_success">%1$d phân loại đã được nhập dữ liệu thành công.</string>
-    <string name="import_parties_success">%1$d nhóm đã được nhập dữ liệu thành công.</string>
-    <string name="import_accounts_success">%1$d tài khoản đã được nhập thành công.</string>
-    <string name="import_transactions_success" tools:ignore="PluralsCandidate">%1$d giao dịch đã được nhập vào tài khoản %2$s</string>
-    <string name="import_accounts_none">Không có tài khoản nào được nhập</string>
-    <string name="import_categories_none">Không có danh mục nào được nhập</string>
-    <string name="import_parties_none">Không có bên giao dịch nào được nhập</string>
-    <string name="import_transactions_none">Không có giao dịch nào được nhập vào tài khoản %1$s</string>
+    <plurals name="import_categories_result">
+        <item quantity="other">%1$d phân loại đã được nhập dữ liệu thành công.</item>
+    </plurals>
+    <plurals name="import_parties_result">
+        <item quantity="other">%1$d nhóm đã được nhập dữ liệu thành công.</item>
+    </plurals>
+    <plurals name="import_accounts_result">
+        <item quantity="other">%1$d tài khoản đã được nhập thành công.</item>
+    </plurals>
+    <plurals name="import_transactions_result">
+        <item quantity="other">%1$d giao dịch đã được nhập vào tài khoản %2$s</item>
+    </plurals>
     <string name="import_source_select_error">Hãy cung cấp một tập tin dạng %1$s</string>
     <string name="menu_categories_setup_default">Thiết lập các danh mục mặc định</string>
     <string name="widget_title_accounts">Tài khoản của tôi</string>
@@ -880,4 +884,8 @@
     <string name="asset_quantity_at_price">%1$s với giá %2$s</string>
     <string name="rounding">Làm tròn</string>
     <string name="important_upgrade_information_heading">Thông tin quan trọng</string>
+    <string name="pref_tag_style_title">Kiểu thẻ</string>
+    <string name="pref_tag_style_outline">Viền màu</string>
+    <string name="pref_tag_style_filled">Tô màu toàn bộ</string>
+    <string name="trade_additional_costs">Chi phí bổ sung</string>
 </resources>

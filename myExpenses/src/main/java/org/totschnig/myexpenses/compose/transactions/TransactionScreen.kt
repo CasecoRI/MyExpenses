@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
-import androidx.compose.foundation.layout.WindowInsetsSides.Companion
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -126,6 +125,7 @@ import org.totschnig.myexpenses.model.AccountGroupingKey
 import org.totschnig.myexpenses.model.AccountType
 import org.totschnig.myexpenses.model.BalanceType
 import org.totschnig.myexpenses.model.CommodityType
+import org.totschnig.myexpenses.model.ContribFeature
 import org.totschnig.myexpenses.model.CurrencyUnit
 import org.totschnig.myexpenses.preference.PreferenceState
 import org.totschnig.myexpenses.util.convAmount
@@ -148,6 +148,7 @@ fun TransactionScreen(
     containerColor: Color = MaterialTheme.colorScheme.background,
     availableFilters: List<AccountGroupingKey>,
     selectedAccountId: Long,
+    accounts: List<FullAccount>,
     viewModel: MyExpensesV2ViewModel,
     bottomBar: @Composable () -> Unit = {},
     visibleActionItems: Int,
@@ -221,7 +222,9 @@ fun TransactionScreen(
                     }
                     val context = LocalContext.current
                     TopAppBar(
-                        windowInsets = windowInsets,
+                        windowInsets = windowInsets.only(
+                            WindowInsetsSides.Horizontal + WindowInsetsSides.Top
+                        ),
                         scrollBehavior = scrollBehavior,
                         modifier = Modifier.height(height),
                         navigationIcon = {
@@ -541,8 +544,7 @@ fun TransactionScreen(
             onRoundingModeChange = { viewModel.setRoundingMode(currentAccount.id, it) },
             reportingCurrency = currentAccount.currencyUnit,
             assets = allCurrencies,
-            fundingAccounts = accountList
-                .filterIsInstance<FullAccount>()
+            fundingAccounts = accounts
                 .filter {
                     !it.isPortfolio && !it.sealed &&
                             it.currencyUnit.code == currentAccount.currencyUnit.code &&
@@ -551,11 +553,13 @@ fun TransactionScreen(
                 .map {
                     it.id to it.labelV2(LocalContext.current)
                 },
-            targetPortfolios = accountList
-                .filterIsInstance<FullAccount>()
+            targetPortfolios = accounts
                 .filter { it.isPortfolio && it.id != currentAccount.id }
                 .map { it.id to it.labelV2(LocalContext.current) },
             initialAction = tradeAction,
+            initialCostCategoryRefs = viewModel.lastTradeFeeCategories.collectAsStateWithLifecycle().value,
+            canAddMultipleCostLegs = viewModel.canAddMultipleCostLegs,
+            onShowUpgrade = { onEvent(AppEvent.ShowUpgrade(ContribFeature.PORTFOLIO)) },
             onCreateAsset = onCreateAsset,
             isCurrencyUsed = isCurrencyUsed,
             onLookupMatchingTransactions = { accountId, total, date, isBuy ->
