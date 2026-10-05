@@ -79,7 +79,7 @@
     <!-- %1$s is replace with account label -->
     <string name="dialog_title_balance_account">%1$s unsurunu uzlaştır</string>
     <string name="dialog_title_contrib_feature">Ücretli işlev</string>
-    <string name="dialog_title_warning_delete_account">Kategori silinsin mi?</string>
+    <string name="dialog_title_warning_delete_account">Hesap silinsin mi?</string>
     <string name="dialog_title_warning_delete_category">Kategori silinsin mi?</string>
     <string name="dialog_title_warning_delete_template">Şablon silinsin mi?</string>
     <string name="dialog_title_warning_delete_transaction">Muamele silinsin mi?</string>
@@ -363,14 +363,22 @@
     <string name="warning_change_fraction_digits_2_divided" tools:ignore="PluralsCandidate">Eğer meblağlar güncellenmezse, değişiklikten sonra %d ile bölünmüş olarak gösterileceklerdir.</string>
     <string name="warning_change_fraction_digits_3">Eğer meblağlar güncellenirse, onların kesirli bölümü hakkında bilgi kaybedersiniz.</string>
     <string name="warning_change_fraction_digits_checkbox_label">Veri tabanındaki meblağları güncelle</string>
-    <string name="import_categories_success">%1$d kategori başarıyla içe aktarıldı.</string>
-    <string name="import_parties_success">%1$d bölüm başarıyla içe aktarıldı.</string>
-    <string name="import_accounts_success">%1$d hesap başarılı bir şekilde içe aktarıldı.</string>
-    <string name="import_transactions_success" tools:ignore="PluralsCandidate">%1$d muamele başarılı bir şekilde %2$s hesabına aktarıldı</string>
-    <string name="import_accounts_none">İçe aktarılan hesap yok</string>
-    <string name="import_categories_none">İçe aktarılan kategori yok</string>
-    <string name="import_parties_none">İçe aktarılan bölüm yok</string>
-    <string name="import_transactions_none">Hiçbir muamele %1$s hesabına aktarılmadı</string>
+    <plurals name="import_categories_result">
+        <item quantity="one">%1$d kategori başarıyla içe aktarıldı.</item>
+        <item quantity="other">%1$d kategori başarıyla içe aktarıldı.</item>
+    </plurals>
+    <plurals name="import_parties_result">
+        <item quantity="one">%1$d bölüm başarıyla içe aktarıldı.</item>
+        <item quantity="other">%1$d bölüm başarıyla içe aktarıldı.</item>
+    </plurals>
+    <plurals name="import_accounts_result">
+        <item quantity="one">%1$d hesap başarılı bir şekilde içe aktarıldı.</item>
+        <item quantity="other">%1$d hesap başarılı bir şekilde içe aktarıldı.</item>
+    </plurals>
+    <plurals name="import_transactions_result">
+        <item quantity="one">%1$d muamele başarılı bir şekilde %2$s hesabına aktarıldı.</item>
+        <item quantity="other">%1$d muamele başarılı bir şekilde %2$s hesabına aktarıldı.</item>
+    </plurals>
     <string name="import_source_select_error">Lütfen %1$s tipinde bir dosya verin</string>
     <string name="menu_categories_setup_default">Varsayılan kategorileri kur</string>
     <string name="widget_title_accounts">Hesaplarım</string>
@@ -817,7 +825,7 @@
     <string name="pref_mlkit_script_title">MlKit için alfabe</string>
     <string name="cb_label_merge_accounts">Hesapları birleştir</string>
     <plurals name="import_categories_icons_updated">
-        <item quantity="one">Bir kategori simgesiyle güncellendi.</item>
+        <item quantity="one">%1$d kategori simgesiyle güncellendi.</item>
         <item quantity="other">%1$d kategori simgesiyle güncellendi.</item>
     </plurals>
     <string name="setup_completed">Kurulum tamamlandı</string>
@@ -993,7 +1001,6 @@
     <string name="budget_import_none_found">Bütçe bulunamadı.</string>
     <string name="webui_download_no_data">Uygulamada yazdırma, dışa aktarma veya yedekleme işlemleri yapıldıktan sonra, dosyalar buradan indirilebilir.</string>
     <string name="filter_dialog_empty">Henüz bir ölçüt eklenmedi. Sorgunuzu tanımlamak ve sonuçlarınızı daraltmak için yukarıdaki düğmelere dokunun.</string>
-    <string name="menu_show_equivalent_value">Eş değer</string>
     <string name="initial_value">İlk değer</string>
     <string name="current_value">Güncel değer</string>
     <string name="total_value">Toplam değer</string>
@@ -1060,7 +1067,7 @@
     <string name="trade_matching_transaction_found">Finansman hesabında eşleşen bir işlem bulundu. Bağlamak için seçin:</string>
     <string name="asset_quantity_at_price">%1$s @ %2$s</string>
     <string name="contrib_feature_portfolio_tracking">Portföy takibi</string>
-    <string name="premium_nudge_portfolio_message">Bir portföyü ücretsiz olarak yönetebilirsiniz. Birden fazla portföyü yönetmek ve gelişmiş takip özelliklerinin kilidini açmak için yükseltin.</string>
+    <string name="premium_nudge_portfolio_message">Bir portföyü ücretsiz olarak yönetebilirsiniz. Birden fazla portföyü yönetmek ve gelişmiş özelliklerin (%1$s) kilidini açmak için yükseltin.</string>
     <string name="parse_error_at_line">%1$d. satırda hata: %2$s</string>
     <string name="rounding">Yuvarlama</string>
     <string name="trade_transfer">Transfer</string>
@@ -1069,4 +1076,13 @@
     <string name="important_upgrade_information_heading">Önemli bilgi</string>
     <string name="help_floating_action_button">Yüzen eylem düğmesi</string>
     <string name="search_asset">Varlık ara</string>
+    <string name="dialog_title_warning_delete_closed_account">Kapatılan hesap silinsin mi?</string>
+    <string name="remap_update_value_date">Ayrıca değer tarihini güncelle</string>
+    <string name="pref_tag_style_title">Etiket biçimi</string>
+    <string name="pref_tag_style_outline">Renkli kenarlık</string>
+    <string name="pref_tag_style_filled">Tamamen renkli</string>
+    <string name="trade_additional_costs">Ek masraflar</string>
+    <string name="trade_add_cost">Masraf ekle</string>
+    <string name="single_pane_view">Tek ekran</string>
+    <string name="split_pane_view">Bölünmüş görünüm</string>
 </resources>

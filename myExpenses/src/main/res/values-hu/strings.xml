@@ -363,14 +363,22 @@
     <string name="warning_change_fraction_digits_2_divided" tools:ignore="PluralsCandidate">Ha az összegek nincsenek frissítve, akkor %d-el osztva jelennek meg a változás után.</string>
     <string name="warning_change_fraction_digits_3">Ha az összegek frissítésre kerülnek, ön elveszíti a törtrészekre vonatkozó információkat.</string>
     <string name="warning_change_fraction_digits_checkbox_label">Összegek frissítése az adatbázisban</string>
-    <string name="import_categories_success">%1$d kategóriák sikeresen beolvasva.</string>
-    <string name="import_parties_success">%1$d résztvevők sikeresen beolvasva.</string>
-    <string name="import_accounts_success">%1$d fiók sikeresen importálva.</string>
-    <string name="import_transactions_success" tools:ignore="PluralsCandidate">%1$d tranzakció sikeresen importálva %2$s fiókba</string>
-    <string name="import_accounts_none">Nincsenek importált fiókok</string>
-    <string name="import_categories_none">Nem lett importálva kategória</string>
-    <string name="import_parties_none">Nincsenek importált felek</string>
-    <string name="import_transactions_none">Nincs tranzakció importálva a(z) %1$s számlára</string>
+    <plurals name="import_categories_result">
+        <item quantity="one">%1$d kategóriák sikeresen beolvasva.</item>
+        <item quantity="other">%1$d kategóriák sikeresen beolvasva.</item>
+    </plurals>
+    <plurals name="import_parties_result">
+        <item quantity="one">%1$d résztvevők sikeresen beolvasva.</item>
+        <item quantity="other">%1$d résztvevők sikeresen beolvasva.</item>
+    </plurals>
+    <plurals name="import_accounts_result">
+        <item quantity="one">%1$d fiók sikeresen importálva.</item>
+        <item quantity="other">%1$d fiók sikeresen importálva.</item>
+    </plurals>
+    <plurals name="import_transactions_result">
+        <item quantity="one">%1$d tranzakció sikeresen importálva %2$s fiókba</item>
+        <item quantity="other">%1$d tranzakció sikeresen importálva %2$s fiókba</item>
+    </plurals>
     <string name="import_source_select_error">Kérjük, adjon meg egy %1$s típusú fájlt</string>
     <string name="menu_categories_setup_default">Alapértelmezett kategóriák beállítása</string>
     <string name="widget_title_accounts">Saját fiókok</string>
@@ -966,7 +974,6 @@
     <string name="budget_import_none_found">Nem találtak költségvetést.</string>
     <string name="webui_download_no_data">Nyomtatás, exportálás vagy biztonsági mentések készítése után a fájlok innen elérhetők lesznek letöltésre.</string>
     <string name="filter_dialog_empty">Még nincs hozzáadott kritérium. Érintsd meg a fenti gombokat, hogy meghatározd a lekérdezésedet és finomítsd az eredményeket.</string>
-    <string name="menu_show_equivalent_value">Ekvivalens érték</string>
     <string name="initial_value">Kezdeti érték</string>
     <string name="current_value">Jelenlegi érték</string>
     <string name="total_value">Összérték</string>
@@ -1064,6 +1071,10 @@
     <string name="trade_matching_transaction_found">A finanszírozási számlán talált egyező tranzakció. Válaszd a linket:</string>
     <string name="asset_quantity_at_price">%1$s – %2$s</string>
     <string name="contrib_feature_portfolio_tracking">Portfóliókövetés</string>
-    <string name="premium_nudge_portfolio_message">Egy portfóliót ingyen kezelhetsz. Frissíts, hogy több portfóliót kezelj, és oldd fel a fejlett követési funkciókat.</string>
+    <string name="premium_nudge_portfolio_message">Egy portfóliót ingyen kezelhetsz. Válts prémiumra több portfólió kezeléséhez, és oldd fel a fejlett funkciókat (%1$s).</string>
     <string name="help_floating_action_button">Lebegő akciógomb</string>
+    <string name="pref_tag_style_title">Címke stílus</string>
+    <string name="pref_tag_style_outline">Színes keret</string>
+    <string name="pref_tag_style_filled">Teljesen színes</string>
+    <string name="trade_additional_costs">További költségek</string>
 </resources>

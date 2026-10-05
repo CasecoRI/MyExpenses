@@ -363,14 +363,22 @@
     <string name="warning_change_fraction_digits_2_divided" tools:ignore="PluralsCandidate">Wenn Beträge nicht aktualisiert werden, erscheinen diese nach der Änderung als dividiert durch %d.</string>
     <string name="warning_change_fraction_digits_3">Wenn Beträge aktualisiert werden, verlieren Sie die Information über deren Bruchteil.</string>
     <string name="warning_change_fraction_digits_checkbox_label">Beträge in der Datenbank aktualisieren</string>
-    <string name="import_categories_success">%1$d Kategorien erfolgreich importiert.</string>
-    <string name="import_parties_success">%1$d Parteien erfolgreich importiert.</string>
-    <string name="import_accounts_success">%1$d Konten erfolgreich importiert.</string>
-    <string name="import_transactions_success" tools:ignore="PluralsCandidate">%1$d Buchungen erfolgreich in das Konto %2$s importiert</string>
-    <string name="import_accounts_none">Keine Konten importiert</string>
-    <string name="import_categories_none">Keine Kategorien importiert</string>
-    <string name="import_parties_none">Keine Parteien importiert</string>
-    <string name="import_transactions_none">Keine Buchungen in das Konto %1$s importiert</string>
+    <plurals name="import_categories_result">
+        <item quantity="one">%1$d Kategorien erfolgreich importiert.</item>
+        <item quantity="other">%1$d Kategorien erfolgreich importiert.</item>
+    </plurals>
+    <plurals name="import_parties_result">
+        <item quantity="one">%1$d Parteien erfolgreich importiert.</item>
+        <item quantity="other">%1$d Parteien erfolgreich importiert.</item>
+    </plurals>
+    <plurals name="import_accounts_result">
+        <item quantity="one">%1$d Konten erfolgreich importiert.</item>
+        <item quantity="other">%1$d Konten erfolgreich importiert.</item>
+    </plurals>
+    <plurals name="import_transactions_result">
+        <item quantity="one">%1$d Buchungen erfolgreich in das Konto %2$s importiert</item>
+        <item quantity="other">%1$d Buchungen erfolgreich in das Konto %2$s importiert</item>
+    </plurals>
     <string name="import_source_select_error">Bitte wählen Sie eine Datei des Typs %1$s</string>
     <string name="menu_categories_setup_default">Standard Kategorien einrichten</string>
     <string name="widget_title_accounts">Meine Konten</string>
@@ -817,7 +825,7 @@
     <string name="pref_mlkit_script_title">Skript für MlKit</string>
     <string name="cb_label_merge_accounts">Konten zusammenführen</string>
     <plurals name="import_categories_icons_updated">
-        <item quantity="one">Eine Kategorie wurde mit Symbol aktualisiert.</item>
+        <item quantity="one">%1$d Kategorie wurde mit Symbol aktualisiert.</item>
         <item quantity="other">%1$d Kategorien wurden mit Symbolen aktualisiert.</item>
     </plurals>
     <string name="setup_completed">Einrichtung abgeschlossen</string>
@@ -952,7 +960,6 @@
     <string name="pref_sync_frequency_summary_0">Setzen Sie diesen Wert auf 0, um die automatische Synchronisierung zu deaktivieren.</string>
     <string name="webui_download_no_data">Nach dem Drucken, Exportieren oder Erstellen von Backups in der App stehen die Dateien hier zum Download bereit.</string>
     <string name="filter_dialog_empty">Es wurden noch keine Kriterien hinzugefügt. Tippen Sie auf die Schaltflächen oben, um Ihre Abfrage zu definieren und Ihre Ergebnisse zu verfeinern.</string>
-    <string name="menu_show_equivalent_value">Äquivalenter Wert</string>
     <string name="initial_value">Anfangswert</string>
     <string name="current_value">Aktueller Wert</string>
     <string name="total_value">Gesamtwert</string>
@@ -1057,7 +1064,7 @@
     <string name="trade_matching_transaction_found">Passende Buchung im Finanzierungskonto gefunden. Zum Verknüpfen auswählen:</string>
     <string name="asset_quantity_at_price">%1$s zu %2$s</string>
     <string name="contrib_feature_portfolio_tracking">Portfolio-Tracking</string>
-    <string name="premium_nudge_portfolio_message">Sie können ein Portfolio kostenlos verwalten. Holen Sie sich das Upgrade, um mehrere Portfolios zu verwalten und erweiterte Tracking-Funktionen freizuschalten.</string>
+    <string name="premium_nudge_portfolio_message">Sie können ein Portfolio kostenlos verwalten. Holen Sie sich das Upgrade, um mehrere Portfolios zu verwalten und erweiterte Funktionen (%1$s) freizuschalten.</string>
     <string name="rounding">Rundung</string>
     <string name="parse_error_at_line">Fehler bei Zeile %1$d: %2$s</string>
     <plurals name="import_trades_missing_assets_message">
@@ -1069,4 +1076,13 @@
     <string name="important_upgrade_information_heading">Wichtige Information</string>
     <string name="search_asset">Suche nach Vermögenswert</string>
     <string name="help_floating_action_button">Schwebende Aktionsschaltfläche</string>
+    <string name="dialog_title_warning_delete_closed_account">Geschlossenes Konto löschen?</string>
+    <string name="remap_update_value_date">Auch Wertstellung aktualisieren</string>
+    <string name="pref_tag_style_title">Schlagwort-Stil</string>
+    <string name="pref_tag_style_outline">Farbiger Rand</string>
+    <string name="pref_tag_style_filled">Vollständig farbig</string>
+    <string name="trade_additional_costs">Zusätzliche Kosten</string>
+    <string name="trade_add_cost">Kosten hinzufügen</string>
+    <string name="single_pane_view">Einzelansicht</string>
+    <string name="split_pane_view">Geteilte Ansicht</string>
 </resources>

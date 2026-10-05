@@ -369,14 +369,26 @@
     <string name="warning_change_fraction_digits_2_divided" tools:ignore="PluralsCandidate">Si les montants ne sont pas mis à jour, ils seront affichés comme divisés par %d après le changement.</string>
     <string name="warning_change_fraction_digits_3">Si les montants sont mis à jour, vous perdrez les informations sur leur partie fractionnaire.</string>
     <string name="warning_change_fraction_digits_checkbox_label">Mise à jour des montants de la base de données</string>
-    <string name="import_categories_success">%1$d catégories ont été importés.</string>
-    <string name="import_parties_success">%1$d tiers ont été importés.</string>
-    <string name="import_accounts_success">%1$d comptes importés avec succès.</string>
-    <string name="import_transactions_success" tools:ignore="PluralsCandidate">%1$d opérations importées avec succès dans le compte %2$s</string>
-    <string name="import_accounts_none">Aucun compte importé</string>
-    <string name="import_categories_none">Aucune catégorie importée</string>
-    <string name="import_parties_none">Aucun tiers importé</string>
-    <string name="import_transactions_none">Aucune opération importée dans le compte %1$s</string>
+    <plurals name="import_categories_result">
+        <item quantity="one">%1$d catégorie a été importée.</item>
+        <item quantity="many">%1$d catégories ont été importées.</item>
+        <item quantity="other">%1$d catégories ont été importées.</item>
+    </plurals>
+    <plurals name="import_parties_result">
+        <item quantity="one">%1$d tiers a été importé.</item>
+        <item quantity="many">%1$d tiers ont été importés.</item>
+        <item quantity="other">%1$d tiers ont été importés.</item>
+    </plurals>
+    <plurals name="import_accounts_result">
+        <item quantity="one">%1$d compte a été importé.</item>
+        <item quantity="many">%1$d comptes ont été importés.</item>
+        <item quantity="other">%1$d comptes ont été importés.</item>
+    </plurals>
+    <plurals name="import_transactions_result">
+        <item quantity="one">%1$d opération a été importée dans le compte %2$s.</item>
+        <item quantity="many">%1$d opérations ont été importées dans le compte %2$s.</item>
+        <item quantity="other">%1$d opérations ont été importées dans le compte %2$s.</item>
+    </plurals>
     <string name="import_source_select_error">Veuillez fournir un fichier de type %1$s</string>
     <string name="menu_categories_setup_default">Charger les catégories par défaut</string>
     <string name="widget_title_accounts">Mes comptes</string>
@@ -826,7 +838,7 @@
     <string name="cb_label_merge_accounts">Fusionner les comptes</string>
     <string name="pref_mlkit_script_title">Script pour MlKit</string>
     <plurals name="import_categories_icons_updated">
-        <item quantity="one">Une catégorie a été mise à jour avec une icône.</item>
+        <item quantity="one">%1$d catégorie a été mise à jour avec une icône.</item>
         <item quantity="many">%1$d catégories ont été mises à jour avec une icône.</item>
         <item quantity="other">%1$d catégories ont été mises à jour avec une icône.</item>
     </plurals>
@@ -964,7 +976,6 @@
     <string name="pref_sync_frequency_summary_0">Réglez sur 0 afin de désactiver la synchronisation automatique.</string>
     <string name="webui_download_no_data">Après avoir imprimé, exporté ou créé des sauvegardes dans l\'application, les fichiers seront disponibles à partir d\'ici pour téléchargement.</string>
     <string name="filter_dialog_empty">Aucun critère n\'a encore été ajouté. Appuyez sur les boutons ci-dessus pour définir votre requête et affiner vos résultats.</string>
-    <string name="menu_show_equivalent_value">Valeur équivalente</string>
     <string name="initial_value">Valeur initiale</string>
     <string name="total_value">Valeur totale</string>
     <string name="enable_automatic_daily_exchange_rate_download">Téléchargement automatique du taux de change quotidien</string>
@@ -1071,7 +1082,7 @@
     <string name="trade_matching_transaction_found">Opération correspondante trouvée dans le compte de financement. Sélectionner pour lier :</string>
     <string name="asset_quantity_at_price">%1$s à %2$s</string>
     <string name="contrib_feature_portfolio_tracking">Suivi de portefeuille</string>
-    <string name="premium_nudge_portfolio_message">Vous pouvez gérer un portefeuille gratuitement. Passez à la version supérieure pour gérer plusieurs portefeuilles et débloquer des fonctionnalités de suivi avancées.</string>
+    <string name="premium_nudge_portfolio_message">Vous pouvez gérer un portefeuille gratuitement. Passez à la version supérieure pour gérer plusieurs portefeuilles et débloquer des fonctionnalités avancées (%1$s).</string>
     <string name="parse_error_at_line">Erreur à la ligne %1$d : %2$s</string>
     <plurals name="import_trades_missing_assets_message">
         <item quantity="one">%1$d ligne fait référence à des actifs inconnus : %2$s.</item>
@@ -1086,4 +1097,13 @@
     <string name="important_upgrade_information_heading">Information importante</string>
     <string name="help_floating_action_button">Bouton d\'action flottant</string>
     <string name="search_asset">Rechercher un actif</string>
+    <string name="dialog_title_warning_delete_closed_account">Supprimer le compte fermé ?</string>
+    <string name="remap_update_value_date">Mettre également à jour la date de valeur</string>
+    <string name="pref_tag_style_title">Style d\'étiquette</string>
+    <string name="pref_tag_style_outline">Bordure colorée</string>
+    <string name="pref_tag_style_filled">Entièrement coloré</string>
+    <string name="trade_additional_costs">Coûts supplémentaires</string>
+    <string name="trade_add_cost">Ajouter un coût</string>
+    <string name="single_pane_view">Panneau unique</string>
+    <string name="split_pane_view">Vue fractionnée</string>
 </resources>

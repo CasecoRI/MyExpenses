@@ -367,14 +367,22 @@
     <string name="warning_change_fraction_digits_2_divided" tools:ignore="PluralsCandidate">Se gli importi non vengono aggiornati, verranno visualizzati come divisi per %d dopo la modifica.</string>
     <string name="warning_change_fraction_digits_3">Se gli importi sono aggiornati, si perderanno le informazioni sulla loro parte frazionaria.</string>
     <string name="warning_change_fraction_digits_checkbox_label">Aggiorna gli importi nel database</string>
-    <string name="import_categories_success">%1$d categorie state importate.</string>
-    <string name="import_parties_success">%1$d beneficiari state importate.</string>
-    <string name="import_accounts_success">%1$d conti importati correttamente.</string>
-    <string name="import_transactions_success" tools:ignore="PluralsCandidate">%1$d transazioni importate correttamente nel conto %2$s</string>
-    <string name="import_accounts_none">Nessun conto importato</string>
-    <string name="import_categories_none">Nessuna categoria importata</string>
-    <string name="import_parties_none">Nessun beneficiario importato</string>
-    <string name="import_transactions_none">Nessuna transazione importata nel conto %1$s</string>
+    <plurals name="import_categories_result">
+        <item quantity="one">È stata importata %1$d categoria.</item>
+        <item quantity="other">Sono state importate %1$d categorie.</item>
+    </plurals>
+    <plurals name="import_parties_result">
+        <item quantity="one">È stato importato %1$d beneficiario.</item>
+        <item quantity="other">Sono stati importati %1$d beneficiari.</item>
+    </plurals>
+    <plurals name="import_accounts_result">
+        <item quantity="one">È stato importato correttamente %1$d conto.</item>
+        <item quantity="other">Sono stati importati correttamente %1$d conti.</item>
+    </plurals>
+    <plurals name="import_transactions_result">
+        <item quantity="one">È stata importata correttamente %1$d transazione nel conto %2$s</item>
+        <item quantity="other">Sono state importate correttamente %1$d transazioni nel conto %2$s</item>
+    </plurals>
     <string name="import_source_select_error">Si prega di fornire un file di tipo %1$s</string>
     <string name="menu_categories_setup_default">Imposta le categorie predefinite</string>
     <string name="widget_title_accounts">I miei conti</string>
@@ -821,7 +829,7 @@
     <string name="cb_label_merge_accounts">Unisci i conti</string>
     <string name="pref_mlkit_script_title">Sistema di scrittura per MlKit</string>
     <plurals name="import_categories_icons_updated">
-        <item quantity="one">Una categoria è stata aggiornata con l\'icona.</item>
+        <item quantity="one">%1$d  categoria è stata aggiornata con l\'icona.</item>
         <item quantity="other">%1$d categorie sono state aggiornate con le icone.</item>
     </plurals>
     <string name="setup_completed">Impostazione completata</string>
@@ -958,7 +966,6 @@
     <string name="budget_import_cannot_be_imported">I seguenti budget si riferiscono a conti non sincronizzati:</string>
     <string name="budget_import_none_found">Nessun budget trovato.</string>
     <string name="filter_dialog_empty">Non sono ancora stati aggiunti criteri. Tocca i pulsanti in alto per definire la query e perfezionare i risultati.</string>
-    <string name="menu_show_equivalent_value">Valore equivalente</string>
     <string name="initial_value">Valore iniziale</string>
     <string name="current_value">Valore attuale</string>
     <string name="enable_automatic_daily_exchange_rate_download">Scaricamento automatico del tasso di cambio giornaliero</string>
@@ -1059,7 +1066,7 @@
     <string name="trade_matching_transaction_found">Trovata transazione corrispondente nel conto di finanziamento. Seleziona per collegare:</string>
     <string name="asset_quantity_at_price">%1$s a %2$s</string>
     <string name="contrib_feature_portfolio_tracking">Tracciamento del portafoglio</string>
-    <string name="premium_nudge_portfolio_message">Puoi gestire un portafoglio gratuitamente. Aggiorna per gestire più portafogli e sbloccare funzioni di tracciamento avanzate.</string>
+    <string name="premium_nudge_portfolio_message">Puoi gestire un portafoglio gratuitamente. Passa a Premium per gestire più portafogli e sbloccare funzionalità avanzate (%1$s).</string>
     <string name="rounding">Arrotondamento</string>
     <string name="parse_error_at_line">Errore alla %1$d: %2$s</string>
     <plurals name="import_trades_missing_assets_message">
@@ -1078,4 +1085,10 @@
     <string name="service_starting">Iniziando…</string>
     <string name="trade_transfer">Trasferimento</string>
     <string name="important_upgrade_information_heading">Informazioni importanti</string>
+    <string name="split_pane_view">Vista divisa</string>
+    <string name="single_pane_view">Riquadro singolo</string>
+    <string name="pref_tag_style_title">Stile Tag</string>
+    <string name="pref_tag_style_outline">Bordo colorato</string>
+    <string name="pref_tag_style_filled">Completamente colorato</string>
+    <string name="trade_additional_costs">Costi aggiuntivi</string>
 </resources>

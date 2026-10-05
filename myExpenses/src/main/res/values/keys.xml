@@ -307,10 +307,12 @@
     <string name="pref_ui_start_screen_key">ui_start_screen</string>
     <string name="pref_tell_a_friend_key">tell_a_friend</string>
     <string name="pref_fab_style_key">fab_style</string>
+    <string name="pref_tag_style_key">tag_style</string>
     <string name="pref_content_based_colors_key">dynamic_colors</string>
     <string name="trade_import_format_hint">Format (Header required): Date,Type,Asset,Quantity,Price,Total,Fee. Provide at least 2 of Quantity, Price, Total.</string>
     <string name="pref_default_action_key">default_action</string>
     <string name="whats_new_411_4" tools:ignore="UnusedResources">Mutual TLS / Client Certificate Support for WebDAV Sync </string>
     <string name="whats_new_412">FinTS: Credit card transactions</string>
-    <string name="menu_sync">@string/menu_sync_now</string>
+    <string name="menu_sync" tools:ignore="UnusedResources">@string/menu_sync_now</string>
+    <string name="pro_badge">PRO</string>
 </resources>
