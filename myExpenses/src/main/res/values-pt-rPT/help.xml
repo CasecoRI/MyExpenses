@@ -97,8 +97,8 @@
     <string name="help_ExpenseEdit_split_info">Uma transação dividida é uma transação única dividida em partes, onde cada parte pode ser atribuída a uma categoria diferente, ou transferida para uma conta diferente.</string>
     <string name="form_account_help_text">Selecionar a conta a que pretence a transação.</string>
     <string name="form_date_time_help_text">Insira a data e a hora em que a transação ocorreu.</string>
-    <string name="form_date_time_help_text_configuration">Nas configurações, pode desativar a entrada de horário e permitir a diferenciação entre a data do pagamento e a data da contabilização.</string>
-    <string name="form_date_time_help_text_link"><![CDATA[Se o indicador <img src=\"ic_hchain\">/<img src=\"ic_hchain_broken\"> estiver no estado vinculado dele, definir a data da contabilização ou a data do pagamento também atualizará a outra data.]]></string>
+    <string name="form_date_time_help_text_configuration">Nas configurações, pode desativar a entrada de horário e permitir a diferenciação entre a data do movimento e a data valor.</string>
+    <string name="form_date_time_help_text_link"><![CDATA[Se o indicador <img src=\"ic_hchain\">/<img src=\"ic_hchain_broken\"> estiver no estado vinculado dele, definir a data valor ou a data do movimento também atualizará a outra data.]]></string>
     <string name="form_amount_switch_help_text">Utilize o interruptor para alternar entre despesa e receita.</string>
     <string name="form_calculator_help_text"><![CDATA[O botão <img src=\"?calcIcon\"> abre a calculadora.]]></string>
     <string name="form_crstatus_help_text">Para transações pertencentes a contas bancárias, pode alterar o estado da transação para liquidada. Para definir como reconciliada terá de utilizar o comando \"Saldo da conta\" a partir da lista de transações. Se o estado for nula, a transação não será contabilizada.</string>
