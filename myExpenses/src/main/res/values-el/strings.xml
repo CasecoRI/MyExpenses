@@ -1018,4 +1018,5 @@
     <string name="pref_tag_style_outline">Χρωματιστό περίγραμμα</string>
     <string name="pref_tag_style_filled">Πλήρως χρωματισμένο</string>
     <string name="trade_additional_costs">Πρόσθετα έξοδα</string>
+    <string name="contrib_feature_portfolio_tracking">Παρακολούθηση χαρτοφυλακίου</string>
 </resources>

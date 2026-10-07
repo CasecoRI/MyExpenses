@@ -763,4 +763,5 @@
     <string name="pref_tag_style_outline">రంగుల సరిహద్దు</string>
     <string name="pref_tag_style_filled">పూర్తిగా రంగుల</string>
     <string name="trade_additional_costs">అదనపు ఖర్చులు</string>
+    <string name="contrib_feature_portfolio_tracking">పోర్ట్‌ఫోలియో ట్రాకింగ్</string>
 </resources>

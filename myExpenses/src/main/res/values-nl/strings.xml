@@ -958,4 +958,5 @@
     <string name="pref_tag_style_outline">Gekleurde rand</string>
     <string name="pref_tag_style_filled">Volledig gekleurd</string>
     <string name="trade_additional_costs">Aanvullende kosten</string>
+    <string name="contrib_feature_portfolio_tracking">Portefeuille-tracking</string>
 </resources>
