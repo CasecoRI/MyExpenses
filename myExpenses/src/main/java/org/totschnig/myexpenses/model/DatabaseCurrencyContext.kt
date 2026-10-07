@@ -53,12 +53,17 @@ open class DatabaseCurrencyContext(
         val commodityType = getEnum(KEY_COMMODITY_TYPE, CommodityType.FIAT)
 
         val (symbol, fractionDigits, label) = if (dbSymbol == null || dbFractionDigits == null || dbLabel == null) {
-            val javaCurrency = try { Currency.getInstance(code) } catch (_: Exception) { null }
+            val javaCurrency = try {
+                Currency.getInstance(code)
+            } catch (_: Exception) {
+                null
+            }
             Triple(
                 dbSymbol ?: javaCurrency?.getSymbol(application.userPreferredLocale) ?: "¤",
-                dbFractionDigits ?: javaCurrency?.defaultFractionDigits?.takeIf { it != -1 } ?: DEFAULT_FRACTION_DIGITS,
+                dbFractionDigits ?: javaCurrency?.defaultFractionDigits?.takeIf { it != -1 }
+                ?: DEFAULT_FRACTION_DIGITS,
                 dbLabel ?: javaCurrency?.getDisplayName(application.userPreferredLocale)
-                    ?: runCatching { CurrencyEnum.valueOf(code).description }.getOrDefault(code)
+                ?: runCatching { CurrencyEnum.valueOf(code).description }.getOrDefault(code)
             )
         } else Triple(dbSymbol, dbFractionDigits, dbLabel)
 
@@ -161,12 +166,19 @@ open class DatabaseCurrencyContext(
     override val localCurrency: Currency by lazy {
         Utils.getCountryFromTelephonyManager(application)?.let {
             try {
-                Currency.getInstance(Locale("", it))
+                getCurrencyForCountry(it)
             } catch (_: Exception) {
                 null
             }
         } ?: Utils.getSaveDefault()
     }
+
+    fun getCurrencyForCountry(country: String): Currency =
+        if (country.equals("BG", ignoreCase = true)) {
+            Currency.getInstance("EUR")
+        } else {
+            Currency.getInstance(Locale("", country))
+        }
 
     override fun preload() {
         scope.launch {
