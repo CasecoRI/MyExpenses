@@ -1121,4 +1121,11 @@
     <string name="pref_tag_style_outline">إطار ملون</string>
     <string name="pref_tag_style_filled">ملون بالكامل</string>
     <string name="trade_additional_costs">تكاليف إضافية</string>
+    <string name="dialog_title_warning_delete_closed_account">هل تريد حذف حساب مغلق؟</string>
+    <string name="search_asset">البحث عن الأصول</string>
+    <string name="remap_update_value_date">وأيضا تحديث تاريخ القيمة</string>
+    <string name="trade_add_cost">إضافة التكلفة</string>
+    <string name="help_floating_action_button">زر الحركة العائمة</string>
+    <string name="single_pane_view">لوحة واحدة</string>
+    <string name="split_pane_view">العرض المنقسم</string>
 </resources>
