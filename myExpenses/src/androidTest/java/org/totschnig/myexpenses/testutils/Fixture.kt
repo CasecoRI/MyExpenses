@@ -116,8 +116,9 @@ class Fixture(inst: Instrumentation) {
         defaultCurrency: CurrencyUnit
     ) {
         this.repository = repository
+        val currencyContext = appContext.appComponent.currencyContext()
         val foreignCurrency =
-            appContext.appComponent.currencyContext()[if (defaultCurrency.code == "EUR") "GBP" else "EUR"]
+            currencyContext[if (defaultCurrency.code == "EUR") "GBP" else "EUR"]
         val exchangeRate = when(defaultCurrency.code) {
             "USD" -> 1.17 //eur to usd
             "EUR" -> 1.16 //GBP to eur
@@ -182,7 +183,7 @@ class Fixture(inst: Instrumentation) {
         ).createIn(repository)
 
         // Setup Portfolio Account with Gold, Bitcoin, and MSCI World ETF holdings
-        val gold = CurrencyUnit("XAU", "XAU", 2, "Gold", CommodityType.COMMODITY)
+        val gold = currencyContext["XAU"]
         val btc = CurrencyUnit("BTC", "₿", 8, "Bitcoin", CommodityType.CRYPTO)
         val msci = CurrencyUnit("IWDA", "IWDA", 2, "iShares Core MSCI World ETF", CommodityType.SECURITY)
 
