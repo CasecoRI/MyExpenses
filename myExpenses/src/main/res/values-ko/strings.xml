@@ -462,4 +462,10 @@
     <string name="pref_tag_style_filled">전체 색상</string>
     <string name="trade_additional_costs">추가 비용</string>
     <string name="contrib_feature_portfolio_tracking">포트폴리오 추적</string>
+    <string name="account_type_investment">투자</string>
+    <string name="total_value">총 가치</string>
+    <string name="history_chart_out_label">지출</string>
+    <string name="history_chart_in_label">수익</string>
+    <string name="budget_table_header_allocated">배정</string>
+    <string name="budget_table_header_spent">지진</string>
 </resources>
