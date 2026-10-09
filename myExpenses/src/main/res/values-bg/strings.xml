@@ -364,20 +364,20 @@
     <string name="warning_change_fraction_digits_3">Ако сумите бъдат обновени ще загубите информацията от тяхната дробна част.</string>
     <string name="warning_change_fraction_digits_checkbox_label">Обнови сумите в базата данни</string>
     <plurals name="import_categories_result">
-        <item quantity="one">Успешно са внесени %1$d категории.</item>
+        <item quantity="one">Успешно е внесена %1$d категория.</item>
         <item quantity="other">Успешно са внесени %1$d категории.</item>
     </plurals>
     <plurals name="import_parties_result">
-        <item quantity="one">Успешно са внесени %1$d страни.</item>
+        <item quantity="one">Успешно е внесена %1$d страна.</item>
         <item quantity="other">Успешно са внесени %1$d страни.</item>
     </plurals>
     <plurals name="import_accounts_result">
-        <item quantity="one">Успешно са внесени %1$d сметки.</item>
+        <item quantity="one">Успешно е внесена %1$d сметка.</item>
         <item quantity="other">Успешно са внесени %1$d сметки.</item>
     </plurals>
     <plurals name="import_transactions_result">
-        <item quantity="one">Успешно са внесени %1$d транзакции в сметка %2$s</item>
-        <item quantity="other">Успешно са внесени %1$d транзакции в сметка %2$s</item>
+        <item quantity="one">Успешно е внесена %1$d транзакция в сметка %2$s.</item>
+        <item quantity="other">Успешно са внесени %1$d транзакции в сметка %2$s.</item>
     </plurals>
     <string name="import_source_select_error">Моля, изберете файл от тип %1$s</string>
     <string name="menu_categories_setup_default">Въведи готови категории</string>
@@ -1079,4 +1079,10 @@
     <string name="pref_tag_style_outline">Цветен контур</string>
     <string name="pref_tag_style_filled">Изцяло оцветен</string>
     <string name="trade_additional_costs">Допълнителни разходи</string>
+    <string name="dialog_title_warning_delete_closed_account">Да изтрия ли затворената сметка?</string>
+    <string name="search_asset">Търсене на актив</string>
+    <string name="remap_update_value_date">Актуализирайте и датата на вальора</string>
+    <string name="trade_add_cost">Добавете цена</string>
+    <string name="single_pane_view">Единичен панел</string>
+    <string name="split_pane_view">Разделен изглед</string>
 </resources>

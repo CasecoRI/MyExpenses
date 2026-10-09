@@ -16,6 +16,7 @@ import androidx.test.espresso.Espresso.pressBack
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.action.ViewActions.scrollTo
 import androidx.test.espresso.matcher.ViewMatchers.withText
+import androidx.test.platform.app.InstrumentationRegistry
 import org.hamcrest.Matchers.containsString
 import org.junit.After
 import org.junit.AfterClass
@@ -73,6 +74,9 @@ abstract class TestMain(locale: String?) : BaseMyExpensesTest() {
                 takeScreenshot("2_summarize")
                 if (!isLarge) {
                     navigateToTransactions()
+                    if (shouldTakeScreenShot) {
+                        Thread.sleep(1000)
+                    }
                     takeScreenshot("1_group")
                 }
                 clickMenuItemOverflowCompose(
@@ -153,6 +157,9 @@ abstract class TestMain(locale: String?) : BaseMyExpensesTest() {
                     MenuItem.Distribution.testTag,
                     menuTestTag = TEST_TAG_OVERFLOW_MENU_TRANSACTIONS
                 )
+                if (shouldTakeScreenShot) {
+                    Thread.sleep(1000)
+                }
                 takeScreenshot("3_distribution")
                 pressBack()
                 clickMenuItemOverflowCompose(
@@ -203,10 +210,27 @@ abstract class TestMain(locale: String?) : BaseMyExpensesTest() {
 
     companion object {
 
+        // Replace CleanStatusBar.enableWithDefaults() in TestMain.kt with:
+        private fun enableCleanStatusBar() {
+            val uiAutomation = InstrumentationRegistry.getInstrumentation().uiAutomation
+            val commands = listOf(
+                "settings put global sysui_demo_allowed 1",
+                "am broadcast -a com.android.systemui.demo -e command enter",
+                "am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200",
+                "am broadcast -a com.android.systemui.demo -e command battery -e level 100 -e plugged false",
+                "am broadcast -a com.android.systemui.demo -e command network -e wifi show -e level 4",
+                "am broadcast -a com.android.systemui.demo -e command status -e bluetooth hide",
+                "am broadcast -a com.android.systemui.demo -e command notifications -e visible false"
+            )
+            for (cmd in commands) {
+                uiAutomation.executeShellCommand(cmd).close()
+            }
+        }
+
         @JvmStatic
         @BeforeClass
         fun beforeAll() {
-            CleanStatusBar.enableWithDefaults()
+            enableCleanStatusBar()
         }
 
         @JvmStatic

@@ -77,8 +77,12 @@ class TestApp : MyApplication() {
                         val locale =
                             ConfigurationCompat.getLocales(application.resources.configuration)
                                 .get(0)!!
-                        return if (locale.country == "VI") Currency.getInstance("VND") else
-                            Currency.getInstance(locale)
+                        return when (locale.country) {
+                            "VI" -> Currency.getInstance("VND")
+                            "BG" -> Currency.getInstance("EUR")
+                            else
+                                -> Currency.getInstance(locale)
+                        }
                     }
             }
         })

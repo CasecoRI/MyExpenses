@@ -1096,4 +1096,9 @@
     <string name="pref_tag_style_outline">Borde coloreado</string>
     <string name="pref_tag_style_filled">Totalmente coloreado</string>
     <string name="trade_additional_costs">Costes adicionales</string>
+    <string name="dialog_title_warning_delete_closed_account">¿Eliminar la cuenta cerrada?</string>
+    <string name="search_asset">Búsqueda de activo</string>
+    <string name="remap_update_value_date">También actualizar la Fecha de valor</string>
+    <string name="trade_add_cost">Añade coste</string>
+    <string name="help_floating_action_button">Botón de Acción Flotante</string>
 </resources>
