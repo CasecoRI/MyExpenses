@@ -13,8 +13,6 @@ import org.totschnig.myexpenses.activity.MyExpensesV2
 import org.totschnig.myexpenses.db2.FLAG_NEUTRAL
 import org.totschnig.myexpenses.db2.FLAG_TRANSFER
 import org.totschnig.myexpenses.db2.entities.Transaction
-import org.totschnig.myexpenses.dialog.MenuItem
-import org.totschnig.myexpenses.dialog.valueOf
 import org.totschnig.myexpenses.provider.KEY_ROWID
 import org.totschnig.myexpenses.provider.KEY_TRANSACTIONID
 import org.totschnig.myexpenses.util.Utils
@@ -247,6 +245,13 @@ var PrefHandler.printLayoutColumnWidths: List<Int>
         ?: printLayoutDefaultColumnsWidths
     set(value) {
         saveIntList(PrefKey.PRINT_LAYOUT_COLUMN_WIDTH, value)
+    }
+
+var PrefHandler.isOnboardingCompleted: Boolean
+    get() =  getBoolean(PrefKey.ONBOARDING_COMPLETED, false) ||
+            getInt(PrefKey.CURRENT_VERSION, -1) != -1
+    set(value) {
+        putBoolean(PrefKey.ONBOARDING_COMPLETED, value)
     }
 
 enum class ColorSource {
