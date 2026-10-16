@@ -425,7 +425,7 @@ public class TransactionProvider extends BaseTransactionProvider {
 
   public static final String METHOD_GET_DATABASE_INFO = "getDatabaseInfo";
   public static final String KEY_SQLITE_VERSION = "sqliteVersion";
-  public static final String KEY_DATABASE_VENDOR = "databaseVendor";
+  public static final String KEY_CIPHER_VERSION = "cipherVersion";
 
   private static final UriMatcher URI_MATCHER;
 
@@ -1826,6 +1826,7 @@ public class TransactionProvider extends BaseTransactionProvider {
       case METHOD_STORE_FRACTION_DIGITS -> {
         SupportSQLiteDatabase db = getHelper().getWritableDatabase();
         BaseTransactionProvider.Companion.storeFractionDigits(db, arg, extras);
+        notifyChange(CURRENCIES_URI, false);
         return null;
       }
       case METHOD_GET_DATABASE_INFO -> {
